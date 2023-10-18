@@ -49,7 +49,7 @@ To make the formalism simpler, we decided to use so-called generalized semantic 
 
 More than that, we reduced the number of the semantic roles. For example, full ABBYY Compreno markup suggests different roles for different characteristic dependencies (that is, weight, speed, size, and so on). In the generalized variant, all such characteristics correspond to one characteristical role. Or, the Compreno model has several slots for temporal relations: Time (‘вчера &ndash; yesterday, через два дня &ndash; in two days’), Time\_Situation (‘когда все приедут &ndash; when everybody comes’), Time\_Being (‘при Иване Грозном &ndash; in times of Ivan the Terrible’). In the generalized presentation, all these roles correspond to only one Time slot.
 
-As a result, the number of the hyperonym semantic classes used in the markup was reduced to 1085 classes, and the number of the semantic roles &ndash; to 143 slots.
+As a result, the number of the hyperonym semantic classes used in the markup was reduced to about 680 classes, and the number of the semantic roles &ndash; to 143 slots.
 
 
 # The conversion of the Compreno markup to the UD format
