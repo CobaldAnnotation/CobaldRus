@@ -4,10 +4,10 @@ A corpus with full three language level markup.
 
 <a href="https://creativecommons.org/licenses/by-nc/4.0/"><img src="https://img.shields.io/static/v1?label=license&message=CC-BY-NC-4.0&color=green"/></a>
 
-## Version 1.0
+## Base version
 
 ### Citing
-Please refer to this paper if you use the CoBaLD Rus corpus version 1.0
+Please refer to this paper if you use the CoBaLD Rus corpus
 ```
 @inproceedings{Petrova2023,
   year = {2023},
