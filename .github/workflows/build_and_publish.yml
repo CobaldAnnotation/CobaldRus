@@ -1,0 +1,39 @@
+name: Publish Dataset
+
+on:
+  push:
+
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install DatasetTools
+        run: |
+          git clone --depth=1 https://github.com/CobaldAnnotation/DatasetTools.git
+          cd DatasetTools
+          pip install .
+          cd ..
+
+      - name: Install Hugging Face CLI
+        run: pip install huggingface_hub
+
+      - name: Login to Hugging Face
+        env:
+          HF_HUB_TOKEN: ${{ secrets.HF_HUB_TOKEN }}
+        run: |
+          huggingface-cli login --token $HF_HUB_TOKEN
+
+      - name: Build and publish
+        run: |
+          python DatasetTools/build_and_publish.py \
+            enhanced/train.conllu \
+            CoBaLD/enhanced-cobald-dataset \
+            ru
